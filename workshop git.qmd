@@ -9,16 +9,18 @@ editor: visual
 ## Set Up Chunk 
 
 ```{r}
-library(tidyverse)
-library(lterdatasampler)
-data(pie_crab)
+#| message: false
+library(tidyverse) # gerneral use package 
+library(lterdatasampler) # pakage of data frame
+data(pie_crab) # importing pie)crab data 
 ```
 
 # New Section: exploratory visualization 
 
 ```{r}
 #| label: latitidue size plot
-ggplot(data = pie_crab, 
-       aes(x = latitude, 
-           y = size ))
+#| # base layer for plot
+ggplot(data = pie_crab, # data is pie_crab
+       aes(x = latitude, # x is latitidue
+           y = size )) # y is size 
 ```
