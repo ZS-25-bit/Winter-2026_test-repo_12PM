@@ -13,3 +13,12 @@ library(tidyverse)
 library(lterdatasampler)
 data(pie_crab)
 ```
+
+# New Section: exploratory visualization 
+
+```{r}
+#| label: latitidue size plot
+ggplot(data = pie_crab, 
+       aes(x = latitude, 
+           y = size ))
+```
