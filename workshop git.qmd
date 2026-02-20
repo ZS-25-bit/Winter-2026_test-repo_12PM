@@ -12,6 +12,7 @@ editor: visual
 #| message: false
 library(tidyverse) # gerneral use package 
 library(lterdatasampler) # pakage of data frame
+library(viridis)
 data(pie_crab) # importing pie)crab data 
 ```
 
@@ -22,5 +23,10 @@ data(pie_crab) # importing pie)crab data
 #| # base layer for plot
 ggplot(data = pie_crab, # data is pie_crab
        aes(x = latitude, # x is latitidue
-           y = size )) # y is size 
+           y = size, # y is size 
+           color = site)) + 
+  geom_point()+ # creating scatter plot
+  theme_minimal()+ # changin theme
+  scale_color_viridis(discrete = TRUE, # selecting spefic colors 
+                      option = "plasma")
 ```
